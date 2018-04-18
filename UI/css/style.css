@@ -1,0 +1,110 @@
+/*BODY*/
+body{
+    background: grey;
+    font: 15px/1.5 "Times New Roman", Helvetica, sans-serif;
+    margin:o;
+    padding:0;
+}
+
+/*GLOBAL*/
+button{
+    color: white; 
+    background:rgb(0, 110, 255);
+    border:0;
+}
+
+/*HEADER SECTION*/
+header{
+    background-color: #35424a;
+    color:white;
+    padding-top:10px;
+    min-height:70px;
+    border-bottom:orangered 3px solid;
+}
+
+ul{
+    list-style-type: none;
+    margin-right:0px;
+    padding-right:20;
+    text-align: right;  
+}
+
+li {
+    display: inline;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-size:12px;   
+}
+
+header .current a{
+    color: black;
+    font-weight: bold;
+}
+
+.highlight{
+    color:orangered;
+    font-weight: bold;
+}
+
+a:hover{
+    color:black;
+    font-weight: bold;
+}
+
+/*SHOWCASE SECTION*/
+#showcase{    
+    margin:0;
+    padding:0;
+    background:url('../img/dinner.jpg') no-repeat 0;
+    background-size: cover;
+    min-height: 400px;
+    text-align: center;
+    color: white; 
+}
+
+#showcase h1,p{
+    font-size:40px; 
+    font-style: italic;
+    text-shadow: 5px 2px 4px orangered;  
+}
+
+
+
+/*FOOTER*/
+footer{
+    padding:2px;
+    margin-top:2px;
+    color:black;
+    background-color:#35424a;
+    text-align:center;
+}
+/* footer font awesome icons */
+.fa {
+    padding: 5px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+/* Instagram */
+.fa-instagram {
+    background:rgb(161, 66, 31);
+    color: white;
+}
