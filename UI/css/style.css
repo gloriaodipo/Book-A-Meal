@@ -13,6 +13,24 @@ button{
     border:0;
 }
 
+.form{
+    position: absolute;
+    height: 500px;
+    widows: 500px;
+    top:30%;
+    left:40%;
+    margin-top:-130px;
+    margin-left:-130px;
+    margin-bottom:15%;
+}
+
+form{
+    border:1px solid white;
+    padding:30px;
+    font-size:120%;
+    color: white;
+}
+
 /*HEADER SECTION*/
 header{
     background-color: #35424a;
@@ -72,7 +90,18 @@ a:hover{
     text-shadow: 5px 2px 4px orangered;  
 }
 
+.bg{
+    background-image: url('../img/bg2.jpg');
+    background-size: contain;
+}
 
+/*SIGNUP*/
+#signup h4 {
+    color:black;
+}
+.email input[type="email"]{
+    width:200px;
+}
 
 /*FOOTER*/
 footer{
