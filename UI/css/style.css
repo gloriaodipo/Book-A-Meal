@@ -13,6 +13,10 @@ button{
     border:0;
 }
 
+a{
+    color:rgb(0, 110, 255);
+}
+
 .form{
     position: absolute;
     height: 500px;
@@ -42,7 +46,7 @@ header{
 
 ul{
     list-style-type: none;
-    margin-right:0px;
+    margin-right:20px;
     padding-right:20;
     text-align: right;  
 }
@@ -73,6 +77,10 @@ a:hover{
     font-weight: bold;
 }
 
+.bg{
+    background-image: url('../img/bg2.jpg');
+    background-size: contain;
+}
 /*SHOWCASE SECTION*/
 #showcase{    
     margin:0;
@@ -90,17 +98,61 @@ a:hover{
     text-shadow: 5px 2px 4px orangered;  
 }
 
-.bg{
-    background-image: url('../img/bg2.jpg');
-    background-size: contain;
-}
-
 /*SIGNUP*/
 #signup h4 {
     color:black;
 }
+
 .email input[type="email"]{
     width:200px;
+}
+
+/* TABLES */
+table tr td button{
+    color:white;
+    background: #3B5998;
+    border: 1px solid black;
+}
+
+table{
+    border-spacing: 5px;
+    border: 2px solid;
+}
+.tables{
+    width:70%;
+    margin-left: 15%;
+}
+caption{
+    color:black;
+    font-size: 20px;
+    font-weight: bolder;
+}
+th{
+    text-align: left;
+    color: black;
+}
+tr:hover {background-color:black;}
+
+.menu{
+    background-image: url('../img/bg10.jpg');
+    background-size: contain;
+    color:white;
+}
+.myorders{
+    width:50%;
+    color:white;
+}
+
+.setup{
+    margin-left:75%;
+    margin-top:5px;
+    border-radius: 8px;
+}
+.setup button{
+    border-radius: 10px;
+    color:black;
+    background: green;
+    font-weight: bold;
 }
 
 /*FOOTER*/
