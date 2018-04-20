@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Manage menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script src="main.js"></script>
+</head>
+<body class="menu">
+    <header>
+        <div class="container">
+            <h1><span class="highlight">Book-A-</span>Meal</h1>
+        </div>
+        <nav>
+            <ul>
+                <li> <a href="setmenu.html">Setup Menu</a></li>
+                <li> <a href="vieworders.html">View All Orders</a></li>
+            </ul>
+        </nav>
+    </header>
+    <table  class="tables">
+        <caption>Manage meal options: Main Menu</caption>
+        <tr>
+            <th>Meal option</th>
+            <th>Price</th>
+            <th>Category</th>
+        </tr>
+        <tr>
+            <td>Beef with rice</td>
+            <td>ksh850</td>  
+            <td>Main dish</td>
+            <td>
+                <button type="button">Remove</button>
+            </td> 
+            <td>
+                <button type="button">Edit</button>
+            </td>   
+        </tr>
+        <tr>
+            <td>Chips & chicken</td>
+            <td>ksh800</td>
+            <td>Main dish</td>
+            <td>
+                <button type="button">Remove</button>
+            </td>
+            <td>
+                <button type="button">Edit</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Ugali with beef</td>
+            <td>ksh600</td>
+            <td>Main dish</td>
+            <td>
+                <button type="button">Remove</button>
+            </td>
+            <td>
+                <button type="button">Edit</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Matoke</td>
+            <td>ksh850</td>
+            <td>Main dish</td>
+            <td>
+                <button type="button">Remove</button> 
+            </td>
+            <td>
+                <button type="button">Edit</button>
+            </td>
+        </tr>
+        <tr>
+            <td>soda 300ml</td>
+            <td>ksh50</td>
+            <td>Cold drinks</td>
+            <td>
+                <button type="button">Remove</button>
+            </td>
+            <td>
+                <button type="button">Edit</button>
+            </td>
+        </tr>
+        <tr>
+            <td>soda 500ml</td>
+            <td>ksh70</td>
+            <td>cold drinks</td>
+            <td>
+                <button type="button">Remove</button>
+            </td>
+            <td>
+                <button type="button">Edit</button>
+            </td>
+            </tr>
+        <tr>
+            <td>Mango juice</td>
+            <td>ksh200</td>
+            <td>Cold drinks</td>
+            <td>
+                <button type="button">Remove</button>
+            </td>
+            <td>
+                <button type="button">Edit</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Cocktail</td>
+            <td>ksh200</td>
+            <td>Cold drinks</td>
+            <td>
+                <button type="button">Remove</button>
+            </td>
+            <td>
+                <button type="button">Edit</button>
+            </td>
+    </tr>
+        <tr>
+            <td>Black tea</td>
+            <td>ksh50</td>
+            <td>Hot drinks</td>
+            <td>
+                <button type="button">Remove</button>
+            </td>
+            <td>
+                <button type="button">Edit</button>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>White tea</td>
+            <td>ksh100</td>
+            <td>Hot drinks</td>
+            <td>
+                <button type="button">Remove</button> 
+            </td>
+            <td>
+                <button type="button">Edit</button>
+            </td>   
+            </tr>
+        <tr>
+            <td>Hot chocolate</td>
+            <td>ksh150</td>
+            <td>Hot drinks</td>
+            <td>
+                <button type="button">Remove</button> 
+            </td>
+            <td>
+                <button type="button">Edit</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Black coffee</td>
+            <td>ksh 200</td>
+            <td>Hot drinks</td>
+            <td>
+                <button type="button">Remove</button>
+            </td>
+            <td>
+                <button type="button">Edit</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Plain chips</td>
+            <td>ksh300</td>
+            <td>Snacks</td>
+            <td>
+                <button type="button">Remove</button> 
+            </td>
+            <td>
+                <button type="button">Edit</button>
+            </td>                
+        <tr>
+            <td>Chips masala</td>
+            <td>ksh400</td>
+            <td>Snacks</td>
+            <td>
+                <button type="button">Remove</button> 
+            </td>
+            <td>
+                <button type="button">Edit</button>
+            </td>                
+        </tr>
+        <tr>
+            <td>Muffin</td>
+            <td>ksh50</td>
+            <td>Snacks</td>
+            <td>
+                <button type="button">Remove</button>
+            </td> 
+            <td>
+                <button type="button">Edit</button>
+            </td>               
+        </tr>
+        <tr>
+            <td>Black forest</td>
+            <td>ksh350</td>
+            <td>Snacks</td>
+            <td>
+                <button type="button">Remove</button>
+            </td>
+            <td>
+                <button type="button">Edit</button>
+            </td>                
+        </tr>
+    </table>
+    <form>
+        <h3>Add to Main Menu:</h3>
+        <label for="meal">Meal option</label>
+        <input type="text" id="meal" placeholder="Enter meal name..." name="">
+        <label for="price">Price</label>
+        <input type="text" id="price" placeholder="Enter price..." name="">
+        <label for="category">Category</label>
+        <input type="text" id="category" placeholder="Enter category..." name="">
+        <button type="submit">Add</button>
+    </form>
+    
+</body>
+</html>
