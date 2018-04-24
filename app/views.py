@@ -8,13 +8,12 @@ api = Api(app)
 class UserAPI(Resource):
     def post(self):
         pass
-
-    def get(self):
-        pass
-
-    
+   
 class MealsAPI(Resource):
     def post(self):
+        pass
+
+    def get(self):
         pass
 
     def get(self, id):
@@ -30,6 +29,9 @@ class OrdersAPI(Resource):
     def post(self):
         pass
 
+    def get(self):
+        pass
+        
     def get(self, id):
         pass
 
