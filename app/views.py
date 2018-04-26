@@ -115,8 +115,5 @@ api.add_resource(Meals_API, '/api/v1/meals')
 
 api.add_resource(Single_meal_API, '/api/v1/meals/<int:meal_id>')
 
-
-
 if __name__ == '__main__':
-
     app.run(debug=True)
