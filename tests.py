@@ -4,6 +4,11 @@ import json
 
 
 
+
+if __name__ == '__main__':
+    unittest.main()
+
+
 class UserTestCase(unittest.TestCase):
     """This class represents the user login and signup test case."""
 
@@ -195,6 +200,3 @@ class OrderTestCase(unittest.TestCase):
 
 
 
-
-if __name__ == '__main__':
-    unittest.main()
