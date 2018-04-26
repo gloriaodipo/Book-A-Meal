@@ -1,9 +1,10 @@
 from marshmallow import Schema, fields
+import random
 
 class User():
 
-    def __init__(self,user_id, first_name, last_name, username, email, password):
-        self.user_id = user_id
+    def __init__(self,first_name, last_name, username, email, password):
+        self.user_id = random.randint(1,100)
         self.first_name = first_name
         self.last_name = last_name
         self.username = username
@@ -21,9 +22,8 @@ class User_Schema(Schema):
 
   
 class Meal():
-
-    def __init__(self,meal_id, meal_name, price, category):
-        self.meal_id = meal_id
+    def __init__(self, meal_name, price, category):
+        self.meal_id = random.randint(1,100)
         self.meal_name = meal_name
         self.price = price
         self.category = category
@@ -54,19 +54,17 @@ class Menu():
                 meal.meal_name = meal_name
                 meal.price = price
                 meal.category = category
-            
+    
+                
 class Order():
-    meals = []
-    def __init__(self, order_id):
-        self.order_id = order_id
-    def add(self,meal):
-        meals.append(meal)
-    def remove(self, meal):
-        for meal in meals:
-            if  meal_id == meals.meal_id:
-                del(meals[meal])       
+    def __init__(self, customer,order_items):
+        self.order_id = random.randint(1,100)
+        self.customer = customer
+        self.order_items = order_items
 
-
-
+class Order_Schema(Schema):
+    order_id = fields.Int()
+    customer = fields.Str()
+    order_items = fields.Str()
 
 
