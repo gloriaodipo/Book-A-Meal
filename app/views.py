@@ -144,7 +144,7 @@ class UpdateOrderAPI(Resource):
 
 api.add_resource(UserSignupAPI, '/api/v1/user/signup')
 
-api.add_resource(UserLoginAPI, '/api/v1/user/login/<int:user_id>')
+api.add_resource(UserLoginAPI, '/api/v1/user/login')
 
 api.add_resource(MealsAPI, '/api/v1/meals')
 
