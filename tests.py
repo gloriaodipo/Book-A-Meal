@@ -24,14 +24,14 @@ class UserTestCase(unittest.TestCase):
     
     def test_login(self):
         """Test API can successfully log in registered users using username and password (POST request)"""
-        response = self.client.post('/api/v1/user/login/1')
+        response = self.client.post('/api/v1/user/login')
         result = json.loads(response.data)
         self.assertEqual(result["message"], "You are successfully logged in")
         self.assertEqual(response.status_code, 200)
 
     def test_wrong_login(self):
         """Test API cannot authenticate login when wrong password is used or no password supplied (POST request)"""
-        response = self.client.post('/api/v1/user/login/4')
+        response = self.client.post('/api/v1/user/login', data=json.dumps({'username': 'gloriaodipo', 'password': 'bubble'}), content_type='application/json')
         result = json.loads(response.data)
         self.assertEqual(result["password"], "")
         self.assertNotEqual(result["password"], "bubble")
