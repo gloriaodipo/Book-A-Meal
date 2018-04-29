@@ -144,6 +144,14 @@ class MenuAPI(Resource):
         result.status_code = 201
         return result
 
+    
+    def get(self):
+        menu = Menu_Schema(many = True)
+        menu_items = menu.dump(menus)
+
+        result = jsonify(menu_items.data)
+        result.status_code = 200
+        return result
 
 
 
