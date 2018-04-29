@@ -22,8 +22,8 @@ class User_Schema(Schema):
 
   
 class Meal():
-    def __init__(self, meal_name, price, category):
-        self.meal_id = random.randint(1,100)
+    def __init__(self,meal_id, meal_name, price, category):
+        self.meal_id = meal_id
         self.meal_name = meal_name
         self.price = price
         self.category = category
@@ -35,30 +35,23 @@ class Meal_Schema(Schema):
     category = fields.Str() 
         
 class Menu():
-    meals = []
-    def __init__(self):
-         meals = []
-    def add(self, meal):
-        meals.append(meal)
-    def remove(self, meal_id):
-        for meal in meals:
-            if meal_id == meal.meal_id:
-                del(meals[meal])
-#returns a list of all meals 
-    def get(self):
-        return self.meals
+        def __init__(self,meal_id, meal_name, price, category):
+            self.meal_id = meal_id
+            self.meal_name = meal_name
+            self.price = price
+            self.category = category
 
-    def edit(self,meal_id, meal_name, price, category):
-        for meal in meals:
-            if meal_id == meal.meal_id:
-                meal.meal_name = meal_name
-                meal.price = price
-                meal.category = category
     
-                
+class Menu_Schema(Schema):
+    meal_id = fields.Int()
+    meal_name = fields.Str()
+    price = fields.Float()
+    category = fields.Str()
+
+
 class Order():
-    def __init__(self, customer,order_items):
-        self.order_id = random.randint(1,100)
+    def __init__(self, order_id, customer,order_items):
+        self.order_id = order_id
         self.customer = customer
         self.order_items = order_items
 
