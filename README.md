@@ -1,4 +1,4 @@
 # Book-A-Meal
 Book-A-Meal is an application that allows customers to make food orders and helps the food vendor know what the customers want to eat. 
 
-https://travis-ci.org/gloriaodipo/Book-A-Meal.svg?branch=APIs
+[![Build Status](https://travis-ci.org/gloriaodipo/Book-A-Meal.svg?branch=APIs)](https://travis-ci.org/gloriaodipo/Book-A-Meal)
