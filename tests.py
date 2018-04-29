@@ -161,7 +161,10 @@ class MenuTestCase(unittest.TestCase):
         self.assertEqual(result["message"], "meal added to menu")
         self.assertEqual(response.status_code, 201) 
 
-
+    def test_get_menu(self):
+        """Test API can get menu (GET request)"""
+        response = self.client.get('/api/v1/menu', data = json.dumps(self.data) , content_type = 'application/json')
+        self.assertEqual(response.status_code, 200)
 
 
 if __name__ == '__main__':
