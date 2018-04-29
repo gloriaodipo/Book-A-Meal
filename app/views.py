@@ -4,7 +4,7 @@ import json
 import random
 
 
-from models import User, Meal, Menu, Order, Meal_Schema, Order_Schema, Menu_Schema
+from app.models import User, Meal, Menu, Order, Meal_Schema, Order_Schema, Menu_Schema
 
 app = Flask(__name__)
 api = Api(app)
