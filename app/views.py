@@ -36,6 +36,8 @@ class MenuAPI(Resource):
     def post(self):
         pass    
 
+    def get(self):
+        pass
 
 if __name__ == '__main__':
 
