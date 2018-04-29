@@ -16,9 +16,6 @@ class MealsAPI(Resource):
     def get(self):
         pass
 
-    def get(self, id):
-        pass
-
     def put(self, id):
         pass
 
@@ -31,20 +28,16 @@ class OrdersAPI(Resource):
 
     def get(self):
         pass
-        
-    def get(self, id):
-        pass
 
     def put(self, id):
         pass
 
-    
-        
+class MenuAPI(Resource):
+    def post(self):
+        pass    
 
-
-
-
-
+    def get(self):
+        pass
 
 if __name__ == '__main__':
 
