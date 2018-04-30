@@ -150,7 +150,7 @@ class MenuTestCase(unittest.TestCase):
         self.data = {
                     "meal_id": 2,
                     "meal_name": "rice beef", 
-                    "price": 500,
+                    "price": 600,
                     "category": "dish"
                     }
 
