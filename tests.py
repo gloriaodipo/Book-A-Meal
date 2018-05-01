@@ -2,9 +2,6 @@ from app.views import app
 import unittest
 import json
 
-
-
-
 class UserTestCase(unittest.TestCase):
     """This class represents the user login and signup test case."""
 
@@ -50,14 +47,12 @@ class UserTestCase(unittest.TestCase):
         self.assertEqual(result["message"], "Successfully registered")
         self.assertEqual(response.status_code, 201)
 
-    
     def test_wrong_signup(self):
         """Test API cannot successfully register a new user if any field is left blank(POST request)"""
         response = self.client.post('/api/v1/user/signup', data = json.dumps({'last_name':'odipo', 'username':'godipo','email':'glodipo@gmail.com', 'password': ''}) , content_type = 'application/json')
         result = json.loads(response.data)
         self.assertEqual(result["message"], "All fields required")
         self.assertEqual(response.status_code, 400)
-
 
 class MealsTestCase(unittest.TestCase):
     """This is the class for meals test cases"""
@@ -101,7 +96,6 @@ class MealsTestCase(unittest.TestCase):
         self.assertEqual(result["message"], "meal deleted")
         self.assertEqual(response.status_code, 200) 
 
-
 class OrderTestCase(unittest.TestCase):
     """This is the class for orders test cases"""
 
@@ -136,7 +130,6 @@ class OrderTestCase(unittest.TestCase):
         result = json.loads(response.data)
         self.assertEqual(result["message"], "order has been modified")
         self.assertEqual(response.status_code, 200) 
-
 
 class MenuTestCase(unittest.TestCase):
     """This is the class for menu test cases"""

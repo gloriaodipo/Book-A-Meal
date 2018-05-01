@@ -3,7 +3,6 @@ from flask_restful import Api, Resource
 import json
 import random
 
-
 from app.models import User, Meal, Menu, Order, Meal_Schema, Order_Schema, Menu_Schema
 
 app = Flask(__name__)
@@ -13,7 +12,6 @@ users = [User(first_name="gloria", last_name="odipo", username="gloriaodipo", em
 meals = [Meal(meal_id = 2, meal_name = "beef with rice", price = 500.00, category ="main dish")]
 orders = [Order( order_id = 1, customer="caren", order_items="beef with rice, juice")]
 menus = [Menu(meal_id = 2, meal_name = "beef with rice", price = 500.00, category ="main dish")]
-
 
 class UserSignupAPI(Resource):
     def post(self):
@@ -32,7 +30,6 @@ class UserSignupAPI(Resource):
         result = jsonify({'message': 'Successfully registered'})
         result.status_code = 201
         return result
-
 
 class UserLoginAPI(Resource):
 
@@ -54,8 +51,7 @@ class UserLoginAPI(Resource):
             result = jsonify({"message": "User unavailable"})
             result.status_code = 404
             return result
-                    
-        
+                       
 class MealsAPI(Resource):
     def post(self):
         meal = request.get_json()
@@ -75,7 +71,6 @@ class MealsAPI(Resource):
         result = jsonify(meal_items.data)
         result.status_code = 200
         return result
-
 
 class SingleMealAPI(Resource):  
 
@@ -99,7 +94,6 @@ class SingleMealAPI(Resource):
                 result.status_code = 200
                 return result  
 
-
 class OrdersAPI(Resource):
     def post(self):
         order = request.get_json()
@@ -119,7 +113,6 @@ class OrdersAPI(Resource):
         result.status_code = 200
         return result
 
-    
 class SingleOrderAPI(Resource):
     def put(self, order_id): 
             for order in orders:
@@ -143,7 +136,6 @@ class MenuAPI(Resource):
         result = jsonify({"message": "meal added to menu"})
         result.status_code = 201
         return result
-
     
     def get(self):
         menu = Menu_Schema(many = True)
@@ -153,20 +145,12 @@ class MenuAPI(Resource):
         result.status_code = 200
         return result
 
-
-
 api.add_resource(UserSignupAPI, '/api/v1/user/signup')
-
 api.add_resource(UserLoginAPI, '/api/v1/user/login')
-
 api.add_resource(MealsAPI, '/api/v1/meals')
-
 api.add_resource(SingleMealAPI, '/api/v1/meals/<int:meal_id>')
-
 api.add_resource(OrdersAPI, '/api/v1/orders')
-
 api.add_resource(SingleOrderAPI, '/api/v1/orders/<int:order_id>')
-
 api.add_resource(MenuAPI, '/api/v1/menu')
 
 
