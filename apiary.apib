@@ -1,0 +1,253 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# Book-A-Meal
+
+Book-A-Meal is an application that allows customers to make food orders and helps the food vendor know what the customers want to eat.
+
+## User registration [/api/v1/sigup]
+
+### Signup [POST]
+
++ Request (application/json)
+
+        {
+            "first_name": "caren",
+            "last_name": "akinyi",
+            "username":"carenakinyi", 
+            "email":"carenakinyi@gmail.com",
+            "password":"passw"
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /api/v1/signup
+
+    + Body
+
+            {
+              "message": "Successfully registered"
+            }
+
+
+## User authentication [/api/v1/sigin]
+
+### Login [POST]
+
++ Request (application/json)
+
+        {
+            "username":"carenakinyi", 
+            "password":"passw"
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /api/v1/signin
+
+    + Body
+
+            {
+              "message": "You are successfully logged in"
+            }
+
+## Meals [/api/v1/meals]
+
+### Add a meal [POST]
+
++ Request (application/json)
+
+        {
+            "meal_name": "rice",
+            "price": 100.00,
+            "category":"main dish"
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /api/v1/meals
+
+    + Body
+
+            {
+              "message": "meal added"
+            }
+
+
+### Get all meals [GET]
+
++ Response 200 (application/json)
+
+        {
+            "meal_name": "rice",
+            "price": 100.00,
+            "category":"main dish"
+        }
+        
+        {
+            "meal_name": "soda",
+            "price": 100.00,
+            "category":"cold drink" 
+        }
+
+### Update a meal [PUT]
+
++ Request (application/json)
+
+        {
+            "meal_id": 2,
+            "meal_name": "rice",
+            "price": 100.00,
+            "category":"main dish" 
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /api/v1/meals/meal_id
+
+    + Body
+
+            {
+              "message": "meal has been modified"
+            }
+
+### Delete a meal [DELETE]
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /api/v1/orders/meal_id
+
+    + Body
+
+            {
+              "message": "meal has been deleted"
+            }
+
+
+## Orders [/api/v1/orders]
+
+### Add order [POST]
+
++ Request (application/json)
+
+        {
+          "customer": "customer name",
+          "order_items": "beef, rice, chapati"
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /api/v1/orders
+
+    + Body
+
+            {
+               "message": "order added"
+            }
+
+### Get all orders [GET]
+
++ Response 200 (application/json)
+
+        {
+          "customer": "customer name",
+          "order_items": "beef, rice, chapati"
+        }
+        
+        {
+          "customer": "customer name",
+          "order_items": "soda, rice, chapati"
+        }
+        
+### Update an order [PUT]
+
++ Request (application/json)
+
+        {
+            "order_id": 2,
+            "order_items": "ugali, beef"
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /api/v1/orders/order_id
+
+    + Body
+
+            {
+              "message": "order has been modified"
+            }
+            
+### Delete an order [DELETE]
+  
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /api/v1/orders/order_id
+
+    + Body
+
+            {
+              "message": "order has been deleted"
+            }
+
+## Menu [/api/v1/menu]
+
+### Add menu [POST]
+
++ Request (application/json)
+
+        {
+            "meal_name": "rice",
+            "price": 100.00,
+            "category":"main dish"
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /api/v1/orders
+
+    + Body
+
+            {
+               "message": "menu added"
+            }
+
+### Get menu [GET]
+
++ Response 200 (application/json)
+
+    + Headers
+    
+            Location: /api/vi/menu
+            
+    + Body
+    
+            {
+                "meal_name": "rice",
+                "price": 100.00,
+                "category":"main dish"
+            }
+        
+            {
+                "meal_name": "soda",
+                "price": 100.00,
+                "category":"cold drink" 
+            }
